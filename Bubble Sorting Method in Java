@@ -1,0 +1,31 @@
+import java.util.Arrays;
+//importing an untility package to perform operations on Arrays.
+public class sorting {
+    public static void main(String[] args) {
+        int[] arr = {12, 11, 56, 74, 2, 63}; //Defining a Array
+        
+        bubbleSort(arr); //Learning Bubble Sort Methord
+        System.out.println("Sorted Array: " + Arrays.toString(arr)); //Output Statememt for the program
+    }
+    public static void bubbleSort(int[] arr){
+        int n = arr.length; // Defining a integer n and it's value is equal to the length of the array 'arr'
+        for (int i = 0; i < n-1; i++){ 
+        // This is the Outer Loop. In which we defined an integer 'i', initalized with the value 0 and going up to 'n-1' with a post increment operator (If i=5,j=i++, now i==6 and j==5 ) 
+            for (int j = 0; j<n-i-1; j++){ 
+            // This is the Inner Loop. In this we define an integer 'j', initialized with value '0' and going up to 'n-i-1' with a post increment operator. (Say n=4 && i=2, then j==1)
+            //As we looped the Length of the array, it results in control the number of iterations in another loop that does manipulate the array.
+                if (arr[j] > arr [j+1]){
+                // If the content of the array 'j' is greater than the content of the array 'j+1'.
+                    int mohit = arr[i];
+                    // An integer named 'mohit' which is equal to the content of the array 'i'.
+                    arr[j] = arr[j+1];
+                    //The content of array 'j' will be equal to the content of array 'j+1'.
+                    arr[j + 1] = mohit;
+                    //finally the content of the array 'j+1' is equal to the integer 'mohit'.
+                }
+
+            }
+        } 
+    }
+}
+//Hope you understood this methord of sorting arrays, also called as Bubble Sorting Method. Thank You. I Mohit, Signing Off.
